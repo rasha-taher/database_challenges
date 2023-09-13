@@ -14,3 +14,26 @@ Select * from teachers;
 INSERT INTO teachers(id, first_name, last_name, subject)
 VALUES (1, 'John', 'Doe', 'Math'),
        (2, 'Jane', 'Smith', 'Science');
+
+/* Challenges 3*/
+Select * from teachers;
+
+Select first_name, subject
+From teachers;
+
+/* challenge 4*/
+SELECT students.first_name
+FROM teachers
+INNER JOIN students
+ON teachers.id = students.id;
+
+SELECT *
+FROM students
+LEFT JOIN teachers
+ON students.teacher_id = teachers.id;
+
+
+SELECT *
+FROM teachers
+RIGHT JOIN students
+ON teachers.id=students.teacher_id;
